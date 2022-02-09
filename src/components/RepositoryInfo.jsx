@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 
-import Text from '../Text';
-import theme from '../../theme';
+import Text from './Text';
+import theme from '../theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -45,9 +45,9 @@ const RepositoryInfo = ({ description, ownerAvatarUrl, language, fullName }) => 
         <Image style={styles.image} source={{uri: ownerAvatarUrl}} />
       </View>
       <View style={styles.infoContainer}>
-        <Text fontSize="subheading" fontWeight="bold">{fullName}</Text>
-        <Text style={styles.description} color="textSecondary">{description}</Text>
-        <Text style={styles.language} color="textButton">{language}</Text>
+        <Text testID="fullName" fontSize="subheading" fontWeight="bold">{fullName}</Text>
+        <Text testID="description" style={styles.description} color="textSecondary">{description}</Text>
+        <Text testID="language" style={styles.language} color="textButton">{language}</Text>
       </View>
     </View>
   );

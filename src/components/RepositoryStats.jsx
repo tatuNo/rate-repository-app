@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import Text from '../Text';
+import Text from './Text';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,19 +27,19 @@ const RepositoryStats = ({ stargazersCount, forksCount, reviewCount, ratingAvera
   return(
     <View style={styles.container}>
       <View style={styles.statsContainer}>
-        <Text fontWeight="bold">{toThousands(stargazersCount)}</Text>
+        <Text testID="stargazersCount" fontWeight="bold">{toThousands(stargazersCount)}</Text>
         <Text color="textSecondary">Stars</Text>
       </View>
       <View style={styles.statsContainer}>
-        <Text fontWeight="bold">{toThousands(forksCount)}</Text>
+        <Text testID="forksCount" fontWeight="bold">{toThousands(forksCount)}</Text>
         <Text color="textSecondary">Forks</Text>
       </View>
       <View style={styles.statsContainer}>
-        <Text fontWeight="bold">{reviewCount}</Text>
+        <Text testID="reviewCount"fontWeight="bold">{reviewCount}</Text>
         <Text color="textSecondary">Review</Text>
       </View>
       <View style={styles.statsContainer}>
-        <Text fontWeight="bold">{ratingAverage}</Text>
+        <Text testID="ratingAverage" fontWeight="bold">{ratingAverage}</Text>
         <Text color="textSecondary">Rating</Text>
       </View>
     </View>
